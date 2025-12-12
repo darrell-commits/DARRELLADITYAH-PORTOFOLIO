@@ -1,0 +1,317 @@
+/* font yang bagus*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Smooth Scroll supaya ga lemot*/
+html {
+  scroll-behavior: smooth;
+}
+
+/* Variabel Warna , Tema Biru Navy */
+:root {
+  --primary: #001f3f; /* Navy Blue */
+  --secondary: #4a90e2; /* Biru Muda */
+  --accent: #ffd166; /* Kuning untuk Highlight */
+  --dark: #333;
+  --light: #f0f8ff; /* Biru Muda untuk Background */
+  --shadow: 0 4px 8px rgba(0, 31, 63, 0.2); /* Shadow Navy */
+  --retro-border: 4px solid var(--primary); /* Border Navy Tebal */
+  --retro-shadow: 6px 6px 0px rgba(0, 31, 63, 0.4); /* Shadow Geser Navy */
+}
+
+/* Body - Gradient Biru Navy */
+body {
+  background: linear-gradient(135deg, var(--light) 0%, #e6f3ff 100%);
+  color: var(--dark);
+  line-height: 1.6;                      
+  background-image: url(gambar/bg5w.jpg);
+  background-size: 1300px;
+}
+
+/* Container - Spacing Lebih Luas */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px; /* Padding Lebih Besar untuk Tata Letak Rapi */
+}
+
+/* Styling untuk tombol utama */
+.btn {
+  display: inline-block; /* Agar tombol tidak penuh lebar */
+  padding: 12px 24px; /* Ruang dalam tombol */
+  background-color: #007bff; /* Warna biru untuk tombol utama */
+  color: white; /* Warna teks */
+  text-decoration: none; /* Hilangkan garis bawah default link */
+  border: none; /* Tanpa border */
+  border-radius: 5px; /* Sudut melengkung */
+  font-size: 16px; /* Ukuran font */
+  font-weight: bold; /* Tebal teks */
+  cursor: pointer; /* Kursor tangan saat hover */
+  transition: background-color 0.3s ease; /* Efek transisi halus */
+}
+
+/* Efek hover untuk tombol utama */
+.btn:hover {
+  background-color: #0056b3; /* Warna lebih gelap saat hover */
+}
+
+/* Styling untuk tombol ghost (variasi) */
+.btn--ghost {
+  background-color: transparent; /* Background transparan */
+  color: #007bff; /* Warna teks biru */
+  border: 2px solid #007bff; /* Border biru */
+}
+
+/* Efek hover untuk tombol ghost */
+.btn--ghost:hover {
+  background-color: #007bff; /* Background biru saat hover */
+  color: white; /* Teks putih saat hover */
+}
+
+/* Header TULISAN PORTOFOLIO DARRELL */
+.header {
+  background: var(--primary);
+  color: white;
+  padding: 25px 0; /* Padding Lebih untuk Bentuk Lebih Tebal */
+  position: sticky; /* tulisan about,skill, dll tetep disitu ga gerak*/
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow);
+  border-radius: 0 0 15px 15px; /* Sudut Bulat Bawah untuk Bentuk Menarik */
+}
+
+.header-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  animation: typing 3s steps(20, end);
+}
+
+.nav {
+  text-align: center;
+}
+
+.nav a {
+  color: white;
+  margin: 0 20px; /* Spacing Lebih untuk Tata Letak */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.2s; /* Transisi Smooth */
+}
+
+.nav a:hover {
+  color: var(--accent);
+  transform: scale(1.1); /* Hover Scale untuk Menarik */
+}
+
+/* Sections - Fade-In dengan Spacing Lebih */
+.section {
+  margin: 60px 0; /* Margin Lebih untuk Tata Letak Vertikal */
+  padding: 50px 0;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.about-section {
+  background: white;
+  border-radius: 20px; /* Sudut Bulat Lebih untuk Bentuk Halus */
+  box-shadow: var(--shadow);
+  border: 2px solid var(--secondary); /* Border Biru untuk Menarik */
+}
+
+.profile-photo {
+  text-align: center;
+  margin-bottom: 25px;
+  
+}
+
+.profile-img{
+  max-width: 200px; /* Ukuran maksimal untuk profile, responsif */
+  height: auto;
+  border-radius: 20%; /* Bulat untuk foto profile */
+  border: 3px solid var(--primary);
+  box-shadow: var(--shadow);
+  animation: floating 3s ease-in-out infinite; /* Animasi floating untuk membuat gambar bergerak terus */
+}
+
+.skill-section {
+  background: var(--secondary);
+  color: white;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--primary); /* Border Navy untuk Kontras */
+}
+
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px; /* Gap Lebih untuk Tata Letak */
+  animation: slideUp 0.8s ease-out 0.3s both;
+}
+
+.skill-list li {
+  background: white;
+  padding: 15px 25px; /* Padding Lebih untuk Bentuk Tebal */
+  border-radius: 15px; /* Sudut Bulat untuk Menarik */
+  box-shadow: var(--shadow);
+  transition: transform 0.3s, box-shadow 0.2s;
+  border: 1px solid var(--primary); /* Border Navy Ringan */
+  color: var(--dark); /* Pastikan teks skill terlihat dengan warna gelap */
+}
+
+.skill-list li:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 31, 63, 0.3);
+}
+
+/* Project Section - Style Retro dengan Navy */
+.project-section {
+  background: var(--light);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--secondary);
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grid Lebih Lebar untuk Tata Letak */
+  gap: 30px;
+}
+
+.project-card {
+  background: #e6f7ff; /* Biru Pastel untuk Retro */
+  border: var(--retro-border);
+  border-radius: 10px; /* Sudut Bulat Ringan untuk Bentuk Modern-Retro */
+  padding: 25px;
+  box-shadow: var(--retro-shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translate(-4px, -4px); /* Geser Lebih untuk Efek Retro Menarik */
+  box-shadow: 8px 8px 0px rgba(0, 31, 63, 0.5);
+}
+
+.project-img {
+  max-width: 100%; /* Responsif, tidak lebih dari container */
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 3px dashed var(--primary);
+}
+
+/* Contact Section */
+.contact-section {
+  background: var(--primary);
+  color: white;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--secondary);
+}
+
+.contact-section a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* Footer - Navy dengan Bentuk Bulat */
+.footer {
+  background: var(--secondary);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  border-radius: 15px 15px 0 0; /* Sudut Bulat Atas */
+}
+
+/* Animasi untuk gambar chibi - muncul tiba-tiba dari tengah dan bounce terus */
+.chibi-img {
+  animation: appearFromCenter 1s ease-out, bounce 2s ease-in-out infinite 1s; /* Muncul dari tengah, lalu bounce terus */
+}
+
+/* Animasi Utama - Smooth dengan Navy */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes typing {  /*buat tulisan portofolio*/
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Animasi floating untuk profile-img - membuat gambar bergerak naik turun terus */
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animasi muncul tiba-tiba dari tengah untuk chibi-img */
+@keyframes appearFromCenter {
+  0% {
+    transform: scale(0) translate(-50%, -50%);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1) translate(-50%, -50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+}
+
+/* Animasi bounce untuk chibi-img - membuat gambar bounce terus setelah muncul */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive - Tata Letak Mobile Lebih Rapi */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 2em;
+  }
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+  .skill-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container {
+    padding: 20px; /* Padding Lebih Kecil di Mobile */
+  }
+  .profile-img {
+    max-width: 150px; /* Lebih kecil di mobile */
+  }
+  .project-img {
+    max-width: 100%;
+  }
+}
